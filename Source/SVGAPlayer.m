@@ -400,6 +400,7 @@
         if (self.videoItem.frames > 0) {
             if ([delegate respondsToSelector:@selector(svgaPlayer:didAnimatedToPercentage:)]) {
                 [delegate svgaPlayer:self didAnimatedToPercentage:(CGFloat)(self.currentFrame + 1) / (CGFloat)self.videoItem.frames];
+                
             } else if ([delegate respondsToSelector:@selector(svgaPlayerDidAnimatedToPercentage:)]) {
                 [delegate svgaPlayerDidAnimatedToPercentage:(CGFloat)(self.currentFrame + 1) / (CGFloat)self.videoItem.frames];
             }
